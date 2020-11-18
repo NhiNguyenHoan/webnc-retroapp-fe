@@ -1,4 +1,6 @@
 import React from 'react';
+import {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,7 +14,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-
+import axios from "axios";
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -59,6 +61,34 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignIn() {
   const classes = useStyles();
+  const initialAccount = {
+    username: "",
+    password: "",
+  };
+  const [account,setAccount] = useState(initialAccount);
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setAccount({ ...account, [name]: value });
+  };
+  const history = useHistory();
+
+  
+  const submitForm = async() => {
+    var data = {
+        username : account.username,
+        password : account.password,
+      };
+      
+      await axios.post("/user/login", data)
+      .then (res => {
+        console.log('respone login',res.data)
+       localStorage.setItem('user_id',res.data);
+       history.push('/home');
+      })
+      .catch(err => console.log('error submit form login'+err))
+      
+   // console.log(data);
+  }
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -72,7 +102,7 @@ export default function SignIn() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          <div className={classes.form} noValidate>
           <TextField
           variant="outlined"
           margin="normal"
@@ -81,6 +111,8 @@ export default function SignIn() {
           id="username"
           label="Username"
           name="username"
+          value={account.username}
+          onChange={handleInputChange}
           autoComplete="username"
           autoFocus
         />
@@ -93,6 +125,8 @@ export default function SignIn() {
               label="Password"
               type="password"
               id="password"
+              value={account.password}
+              onChange={handleInputChange}
               autoComplete="current-password"
             />
             <FormControlLabel
@@ -105,6 +139,7 @@ export default function SignIn() {
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={submitForm}
             >
               Sign In
             </Button>
@@ -123,7 +158,7 @@ export default function SignIn() {
             <Box mt={5}>
               <Copyright />
             </Box>
-          </form>
+          </div>
         </div>
       </Grid>
     </Grid>

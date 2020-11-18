@@ -370,6 +370,7 @@
 .content-card .card_content-edit input {
   border: 1px solid white;
   padding-left: 5px;
+  width: 95%;
 }
 
 .content-card .card_content .like {

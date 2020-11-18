@@ -47,14 +47,14 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      width: '12ch',
+      width: '60ch',
       '&:focus': {
-        width: '20ch',
+        width: '50ch',
       },
     },
   },
   title:{
-      paddingLeft: '10px',
+      paddingLeft: '40px',
       marginBottom:'0',
   }
 }));

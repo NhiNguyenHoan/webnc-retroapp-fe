@@ -23,10 +23,11 @@ const useStyles = makeStyles((theme) => ({
 export default function ListBoards() {
   const classes = useStyles();
   const [listBoard, setlistBoard] = useState([]);
-  const [openDialog, setopenDialog] = useState(false)
+  const [openDialog, setopenDialog] = useState(false);
+  const user_id = localStorage.getItem('user_id');
 
   useEffect(() => {
-      axios.get(`dashboard/getByUid`)
+      axios.get(`dashboard/getByUid/${user_id}`)
           .then(function (response) {
 
               setlistBoard(response.data);
@@ -39,7 +40,6 @@ export default function ListBoards() {
 
 
   }, []);
-  
 
 
   return (
@@ -53,7 +53,9 @@ export default function ListBoards() {
             </Paper>
           </Grid>
           {listBoard && listBoard.map((board, index) =>
+            
             <BoardItem key={index} id={board._id} name={board.name} context={board.context} />
+          
         )}
         </Grid>
         {openDialog && <DialogCreateBoard onChange={(a) => setopenDialog(a)} />}

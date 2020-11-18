@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
+import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -15,17 +16,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function DashBoardHeader() {
+export default function NavBar() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
 
       <ButtonGroup color="primary" aria-label="outlined secondary button group">
-        <Button>DASHBOARD</Button>
-        <Button>TEAMS</Button>
-        <Button>ANALYTICS</Button>
-        <Button>BILLINGS</Button>
+      
+        <Button><Link to={{pathname: `/home`}}>DASHBOARD</Link></Button>
+        <Button><Link to={{pathname: `/home`}}>TEAMS</Link></Button>
+        <Button><Link to={{pathname: `/home`}}>ANALYSIS</Link></Button>
+        <Button><Link to={{pathname: `/home`}}>BILLING</Link></Button>
+
       </ButtonGroup>
 
     </div>

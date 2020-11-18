@@ -82,6 +82,7 @@ export default function CardDragDrop({id}) {
     }
 
     const handleAdd = (stt) => {
+        document.getElementById(`add${stt}`).value ="";
         const newAdd = { ...addOpen };
         newAdd[stt] = true;
         setaddOpen(newAdd);

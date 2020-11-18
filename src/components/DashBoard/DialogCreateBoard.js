@@ -7,7 +7,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import MainBoard from "./BoardDetail/MainBoard";
 import axios from 'axios';
 export default function FormDialog({onChange}) {
   const [open, setOpen] = React.useState(true);
@@ -17,13 +16,12 @@ export default function FormDialog({onChange}) {
     context: "",
     Item: [[], [], []]
 })
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+
   let history = useHistory();
   const handleCreate = () => {
     console.log('board', board)
     const data = { ...board }
+    data.uid = localStorage.getItem('user_id');
     console.log('data', data)
     axios({
         method: 'post',
@@ -39,11 +37,8 @@ export default function FormDialog({onChange}) {
             console.log(error);
         });;
 
-
-
-
     onChange(false)
-    // setOpen(false);
+
 };
 
 
@@ -54,24 +49,22 @@ export default function FormDialog({onChange}) {
 
 const handleNameChange = (event) => {
     setBoard({ ...board, name: event.target.value });
-    // console.log('board', board)
+
 };
 
   return (
     <div>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-        <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
+        <DialogTitle id="form-dialog-title"> Create New RetroBoard</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To subscribe to this website, please enter your email address here. We will send updates
-            occasionally.
+           Template Went Well - To Improve - Action
           </DialogContentText>
           <TextField
             autoFocus
             margin="dense"
             id="name"
-            label="Email Address"
-            type="email"
+            label="Board Name"
             fullWidth
             value={board.name}
             onChange ={handleNameChange}
