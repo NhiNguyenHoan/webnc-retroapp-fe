@@ -1,0 +1,130 @@
+.mainboard {
+& .board_wrap {
+    &-head {
+        padding: 15px 15px;
+        // display: flex;
+        // flex-direction: column;
+        // width: 100%;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    & .title {
+        font-size: 20px;
+        float: left;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        word-break: break-all;
+        text-align: left;
+        max-width: 150px;
+    }
+    & .info_wrap {
+        padding-top: 15px;
+        font-size: 0.8rem;
+        display: flex !important;
+        justify-content: space-between;
+        width: 100%;
+        & svg {
+            font-size: 0.8rem;
+            padding-right: 2px;
+            margin-top: 3px;
+        }
+        &-time {
+            display: flex;
+        }
+    }
+    & .elements {
+        margin-top: 10px;
+        width: 100%;
+        &_wrap {
+            display: flex;
+            margin: 13px 0;
+            // padding-left: 20px;
+        }
+        & hr {
+            margin: 0 0;
+            opacity: 0.3;
+        }
+        & svg {
+            color: #ffcf22;
+            font-size: 3rem;
+            padding: 0;
+        }
+        & .wentwell {
+            width: 20%;
+            height: 8px;
+            background-color: #009688;
+            margin-right: 10px;
+        }
+        & .toimprove {
+            width: 20%;
+            height: 8px;
+            background-color: #e91e63;
+            margin-right: 10px;
+        }
+        & .actions {
+            width: 20%;
+            height: 8px;
+            background-color: #9c27b0;
+        }
+    }
+    & .button-group {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        & .btn-url {
+            padding: 5px 5px;
+            flex: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #9c27b0;
+            & svg {
+                padding-top: 1px;
+                margin-right: 2px;
+                font-size: 1rem;
+            }
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(236, 236, 236);
+            }
+        }
+        & .btn-option {
+            flex: 1;
+            float: right;
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(236, 236, 236);
+            }
+        }
+    }
+}
+& .btn-addboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2.5px dashed #cacaca;
+    background-color: #f3f3f3;
+    color: #8e24aa;
+    height: 110px;
+    padding: 24px;
+    & svg {
+        font-size: 4rem;
+    }
+    &:hover {
+        border: 2.5px dashed #8e24aa;
+        cursor: pointer;
+    }
+    & span {
+        font-weight: 600;
+    }
+}
+}

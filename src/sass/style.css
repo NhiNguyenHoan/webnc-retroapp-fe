@@ -1,0 +1,404 @@
+.mainboard .board_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.mainboard .board_wrap-head {
+  padding: 15px 15px;
+}
+
+.mainboard .board_wrap:hover {
+  cursor: pointer;
+}
+
+.mainboard .board_wrap .title {
+  font-size: 20px;
+  float: left;
+  word-break: break-all;
+  text-align: left;
+  max-width: 150px;
+}
+
+.mainboard .board_wrap .info_wrap {
+  padding-top: 15px;
+  font-size: 0.8rem;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.mainboard .board_wrap .info_wrap svg {
+  font-size: 0.8rem;
+  padding-right: 2px;
+  margin-top: 3px;
+}
+
+.mainboard .board_wrap .info_wrap-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainboard .board_wrap .elements {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.mainboard .board_wrap .elements_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 13px 0;
+}
+
+.mainboard .board_wrap .elements hr {
+  margin: 0 0;
+  opacity: 0.3;
+}
+
+.mainboard .board_wrap .elements svg {
+  color: #ffcf22;
+  font-size: 3rem;
+  padding: 0;
+}
+
+.mainboard .board_wrap .elements .wentwell {
+  width: 20%;
+  height: 8px;
+  background-color: #009688;
+  margin-right: 10px;
+}
+
+.mainboard .board_wrap .elements .toimprove {
+  width: 20%;
+  height: 8px;
+  background-color: #e91e63;
+  margin-right: 10px;
+}
+
+.mainboard .board_wrap .elements .actions {
+  width: 20%;
+  height: 8px;
+  background-color: #9c27b0;
+}
+
+.mainboard .board_wrap .button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainboard .board_wrap .button-group .btn-url {
+  padding: 5px 5px;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #9c27b0;
+}
+
+.mainboard .board_wrap .button-group .btn-url svg {
+  padding-top: 1px;
+  margin-right: 2px;
+  font-size: 1rem;
+}
+
+.mainboard .board_wrap .button-group .btn-url:hover {
+  cursor: pointer;
+  background-color: #ececec;
+}
+
+.mainboard .board_wrap .button-group .btn-option {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  float: right;
+}
+
+.mainboard .board_wrap .button-group .btn-option:hover {
+  cursor: pointer;
+  background-color: #ececec;
+}
+
+.mainboard .btn-addboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2.5px dashed #cacaca;
+  background-color: #f3f3f3;
+  color: #8e24aa;
+  height: 110px;
+  padding: 24px;
+}
+
+.mainboard .btn-addboard svg {
+  font-size: 4rem;
+}
+
+.mainboard .btn-addboard:hover {
+  border: 2.5px dashed #8e24aa;
+  cursor: pointer;
+}
+
+.mainboard .btn-addboard span {
+  font-weight: 600;
+}
+
+.board-note-wrap {
+  width: 99%;
+}
+
+.board-note-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #f3f3f3;
+}
+
+.board-note_header {
+  background: #f3f3f3;
+  margin-bottom: 5px;
+}
+
+.board-note_header-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.board-note_header-wrap .wentwell {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.board-note_header-wrap .wentwell .add-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.board-note_header-wrap .wentwell .add-btn button {
+  width: 97%;
+  height: 32px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #e7e4e4;
+}
+
+.board-note_header-wrap .wentwell .add-btn button:hover {
+  cursor: pointer;
+  background-color: #cccccc;
+}
+
+.board-note_header-wrap .title {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.board-note_header-wrap .title .square {
+  width: 12px;
+  height: 12px;
+  bottom: 3px;
+  border-radius: 3px;
+}
+
+.board-note_header-wrap .title .name {
+  font-weight: 700;
+  margin-left: 10px;
+  font-size: 1.1rem;
+}
+
+.board-note .add-note {
+  margin: 10px 10px;
+  background-color: #fff;
+}
+
+.board-note .note-wrap {
+  background-color: #e7e4e4 !important;
+}
+
+.board-note .item {
+  background: #f3f3f3 !important;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.content-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.content-card .item {
+  background: #f3f3f3 !important;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.content-card .card {
+  padding: 10px 10px !important;
+  border-radius: 3px;
+}
+
+.content-card .card_content-wrap {
+  font-weight: 600;
+  color: #ffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-card .card_content-wrap .btn-edit:hover {
+  cursor: pointer;
+}
+
+.content-card .card_content-wrap svg {
+  color: #ffff;
+  width: 20px;
+}
+
+.content-card .card_content-edit {
+  display: none;
+  padding: 5px 0;
+  background-color: #ffff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-card .card_content-edit .btn-edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content-card .card_content-edit .btn-edit .save {
+  font-size: 0.6rem;
+  margin-left: 5px;
+  background: #00c853;
+  border-bottom: 2px solid #00a946;
+  width: 40px;
+  height: 20px;
+  padding: 0;
+  padding-bottom: 2px;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.content-card .card_content-edit .btn-edit .save:hover {
+  cursor: pointer;
+  background: #04913f;
+}
+
+.content-card .card_content-edit .btn-edit svg {
+  color: #e91e63;
+}
+
+.content-card .card_content-edit input {
+  border: 1px solid white;
+  padding-left: 5px;
+}
+
+.content-card .card_content .like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-weight: 700;
+  color: #ffff;
+}
+
+.content-card .card_content .like svg {
+  height: 17px;
+}
+
+.content-card .item0 .card {
+  background: #009688 !important;
+}
+
+.content-card .item1 .card {
+  background: #e91e63 !important;
+}
+
+.content-card .item2 .card {
+  background: #9c27b0 !important;
+}
+/*# sourceMappingURL=style.css.map */

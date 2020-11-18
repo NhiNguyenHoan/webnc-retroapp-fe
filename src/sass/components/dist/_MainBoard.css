@@ -1,0 +1,25 @@
+.mainboard {
+  background-color: #f3f3f3;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mainboard_wrap {
+  width: 92%;
+}
+.mainboard_title {
+  font-size: 30px;
+  font-weight: 650;
+  padding-top: 50px;
+  color: #283593;
+}
+.mainboard .filter-bar_wrap {
+  display: flex;
+}
+.mainboard .filter-bar_search {
+  display: flex;
+}
+.mainboard .filter-bar_search .search-icon {
+  color: white;
+  height: 10px;
+}

@@ -1,0 +1,158 @@
+.board-note {
+    &-wrap {
+        width: 99%;
+    }
+    &-main {
+        display: flex;
+        justify-content: center;
+        background: #f3f3f3;
+    }
+    &_header {
+        background: #f3f3f3;
+        margin-bottom: 5px;
+        &-wrap {
+            display: flex;
+            & .wentwell {
+                flex: 1;
+                & .add-btn {
+                    display: flex;
+                    justify-content: center;
+                    & button {
+                        width: 97%;
+                        height: 32px;
+                        border: none;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        background-color: #e7e4e4;
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #cccccc;
+                        }
+                    }
+                }
+            }
+            & .title {
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                & .square {
+                    width: 12px;
+                    height: 12px;
+                    bottom: 3px;
+                    border-radius: 3px;
+                }
+                & .name {
+                    font-weight: 700;
+                    margin-left: 10px;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+    & .add-note {
+        margin: 10px 10px;
+        background-color: #fff;
+    }
+    & .note-wrap {
+        background-color: #e7e4e4 !important;
+    }
+    & .item {
+        background: #f3f3f3 !important;
+        flex: 1;
+    }
+
+
+}
+.content-card {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    & .item {
+        background: #f3f3f3 !important;
+        flex: 1;
+    }
+    & .card {
+        padding: 10px 10px !important;
+        border-radius: 3px;
+        
+        &_content {
+            &-wrap {
+                font-weight: 600;
+                color: #ffff;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                & .btn-edit {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                & svg {
+                    color: #ffff;
+                    width: 20px;
+                }
+            }
+            &-edit {
+                display: none;
+                padding: 5px 0;
+                background-color: #ffff;
+                flex-direction: column;
+                justify-content: space-between;
+                & .btn-edit {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    & .save {
+                        font-size: 0.6rem;
+                        margin-left: 5px;
+                        background: #00c853;
+                        border-bottom: 2px solid #00a946;
+                        width: 40px;
+                        height: 20px;
+                        padding: 0;
+                        padding-bottom: 2px;
+                        border: none;
+                        color: #fff;
+                        border-radius: 3px;
+                        &:hover {
+                            cursor: pointer;
+                            background: #04913f;
+                        }
+                    }
+                    & svg {
+                        color: #e91e63;
+                    }
+                }
+                & input {
+                    border: 1px solid rgb(255, 255, 255);
+                    padding-left: 5px;
+                }
+            }
+            & .like {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                font-weight: 700;
+                color: #ffff;
+                & svg {
+                    height: 17px;
+                }
+            }
+        }
+    }
+    & .item0 {
+        & .card {
+            background: #009688 !important;
+        }
+    }
+    & .item1 {
+        & .card {
+            background: #e91e63 !important;
+        }
+    }
+    & .item2 {
+        & .card {
+            background: #9c27b0 !important;
+        }
+    }
+}
